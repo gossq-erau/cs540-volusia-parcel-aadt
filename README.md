@@ -77,7 +77,7 @@ There are some challenges for correlating parcels to the AADT segment data:
 
 To overcome these issues, we make a *best guess* to the AADT segment belongs to based on distance of the parcel marker from the `volusia.gis_address` table the nearest segment in the AADT dataset using the point-line distance 2d algorithm.
 
-!()[https://mathworld.wolfram.com/images/equations/Point-LineDistance2-Dimensional/NumberedEquation8.gif]
+<img src="https://mathworld.wolfram.com/images/equations/Point-LineDistance2-Dimensional/NumberedEquation8.gif">
 
 An exhaustive distance *d* of every Volusia county parcel marker was calculated for every AADT segment using Python. This process took 4 hours using 6 threads to complete. In the end, every parcel has a predicted "nearest" AADT segment in a table with parcel id `pid` and segment id `seg_id` in a table called `volusia.addr_addt`.
 
